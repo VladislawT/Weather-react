@@ -1,0 +1,36 @@
+$light-background: #fff;
+$box-shadow: 2px 5px 25px -3px rgba(100, 100, 100, 0.25);
+$border-radius: 20px;
+$primary-color: #4793ff;
+$light-color: #000;
+$base-color: #939cb0;
+
+$body-background-dark: #1a1b1b;
+$body-background-light: #ffffff;
+
+$components-text-dark: #ffffff;
+$components-text-light: #000;
+
+$components-background-dark: #535858;
+$components-background-light: #ffffff;
+
+$icons-background-dark: #47a7a7;
+$icons-background-light: #d6adad;
+
+:root {
+    --body-background-dark: #{$body-background-dark};
+    --body-background-light: #{$body-background-light};
+    --body-background-default: var(#{--body-background-light});
+
+    --components-background-dark: #{$components-background-dark};
+    --components-background-light: #{$components-background-light};
+    --components-background-default: var(#{--components-background-light});
+
+    --components-text-dark: #{$components-text-dark};
+    --components-text-light: #{$components-text-light};
+    --components-text-default: var(#{--components-text-light});
+    
+    --icons-background-dark: #{$icons-background-dark};
+    --icons-background-light: #{$icons-background-light};
+    --icons-background-default: var(#{--icons-background-light});
+}

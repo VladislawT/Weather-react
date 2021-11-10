@@ -1,0 +1,75 @@
+@import '../../../styles/variables.scss';
+
+.popup{
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 325px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $light-background;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    min-height: 284px;
+    max-width: 750px;
+    width: 100%;
+}
+
+.blur{
+    position: absolute;
+    z-index: 80;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.close{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    svg{
+        cursor: pointer;
+    }
+}
+
+.this__day {
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    background: $light-background;
+    border-radius: $border-radius;
+}
+
+.top__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    svg {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.this__temp {
+    font-size: 96px;
+    font-weight: 600;
+    color: $primary-color;
+}
+
+.this__day_name {
+    font-size: 40px;
+    color: $light-color;
+}
+
+.bottom__block {
+
+    .this__time,
+    .this__city {
+        color: $base-color;
+        font-size: 25px;
+    }
+}

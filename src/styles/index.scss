@@ -1,0 +1,21 @@
+@import '~normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+*,*:after,*:before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Merriweather', serif;
+    position: relative;
+    background: var(#{--body-background-default});
+}
+.global__container{
+    height: 100%;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+   
+}

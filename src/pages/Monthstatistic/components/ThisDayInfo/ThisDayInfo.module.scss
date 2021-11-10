@@ -1,0 +1,34 @@
+@import '../../../../styles/variables.scss';
+
+.this__day_info{
+    position: relative;
+    background: var(#{--components-background-default});
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    min-height: 250px;
+    max-width: 750px;
+    width: 100%;
+    img{
+        position: absolute;
+        top: 0;
+        right: 0;
+
+    }
+    &_items{
+        min-width: 500px;
+        padding: 30px 20px 0 0;
+    }
+}
+
+.item{
+   display: flex;
+   padding: 15px 0 10px 15px;
+   font-size: 20px;
+}
+
+.indicator{
+    padding-right: 15px;
+    &__name{
+        padding-right: 10px;
+    }
+}

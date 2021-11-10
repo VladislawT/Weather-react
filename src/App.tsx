@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router';
+import Home from './pages/Home/components/Home';
+import Monthstatistic from './pages/Monthstatistic/components/Monthstatistic';
+import { Header } from './pages/sharad/Hader/Header';
+import { Popup } from './pages/sharad/Popup/Popup';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="global__container">
+      {/* <Popup /> */}
+      <div className="container">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/monthstatistic" element={<Monthstatistic />} />
+        </Routes>
+      </div>
+    </div >
   );
 }
 
