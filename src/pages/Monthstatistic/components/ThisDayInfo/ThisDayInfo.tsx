@@ -14,6 +14,7 @@ export interface Item {
     icon_id: string,
     name: string,
     value: string,
+    units: string,
 }
 
 export const ThisDayInfo = ({weather}: Props) => {
@@ -21,22 +22,26 @@ export const ThisDayInfo = ({weather}: Props) => {
         {
             icon_id: 'temp',
             name: 'Температура',
-            value: '20° - ощущается как 17°',
+            value: `${weather.main.temp}`,
+            units: '°',
         },
         {
             icon_id: 'pressure',
             name: 'Давление',
-            value: '765 мм ртутного столба - нормальное',
+            value: `${weather.main.pressure}`,
+            units: ' мм рт. ст.'
         },
         {
             icon_id: 'precipitation',
-            name: 'Осадки',
-            value: 'Без осадков',
+            name: 'Влажность',
+            value: `${weather.main.humidity}`,
+            units: '%',
         },
         {
             icon_id: 'wind',
             name: 'Ветер',
-            value: '3 м/с юго-запад - легкий ветер',
+            value: `${weather.wind.speed}`,
+            units: ' м/с',
         },
     ]
     return (
@@ -44,7 +49,7 @@ export const ThisDayInfo = ({weather}: Props) => {
             <div className={s.this__day_info_items}>
                 {
                     items.map((item: Item) => (
-                        <ThisDayItem weather={weather} key={item.icon_id} item={item}/>
+                        <ThisDayItem weather={weather} key={item.icon_id} item={item} />
                     ) )
                 }
             </div>

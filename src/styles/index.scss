@@ -9,6 +9,7 @@ body{
     font-family: 'Merriweather', serif;
     position: relative;
     background: var(#{--body-background-default});
+    color: var(#{--icons-background-default});
 }
 .global__container{
     height: 100%;

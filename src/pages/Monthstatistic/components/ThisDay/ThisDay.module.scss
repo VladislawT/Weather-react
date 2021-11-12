@@ -1,7 +1,7 @@
 @import '../../../../styles/variables.scss';
 
 .this__day {
-    padding: 20px;
+    padding: 15px;
     max-width: 400px;
     width: 100%;
     background: var(#{--components-background-default});
@@ -14,7 +14,8 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color: var(#{--components-text-default});
 
     svg {
         width: 119px;
@@ -31,14 +32,17 @@
 
 .this__day_name {
     font-size: 40px;
-    color: $light-color;
+    color: var(#{--components-text-default});
 }
 
 .bottom__block {
-
+    
     .this__time,
     .this__city {
-        color: $base-color;
+        color: var(#{--components-text-default});
         font-size: 25px;
+    }
+    .this__time_units{
+        font-size: 18px;
     }
 }

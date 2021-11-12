@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { GlobalSvgSelector } from '../../../assets/images/icons/global/GlobalSvgSelector';
+import { useCastomSelector, useCustomDispatch } from '../../../hooks/store';
+import { fetchCurrentWeather } from '../../../store/thunks/fethCurrentWeather';
 import { Item } from '../../Monthstatistic/components/ThisDayInfo/ThisDayInfo';
 import { ThisDayItem } from '../../Monthstatistic/components/ThisDayInfo/ThisDayItem';
 import s from './Popup.module.scss';
@@ -11,29 +13,42 @@ interface Props {
 
 export const Popup = (item: Props) => {
 
+    const dispatch = useCustomDispatch();
+
+    const { weather } = useCastomSelector((state) => state.currentWeatherSliceReducer);
+
+    useEffect(() => {
+        dispatch(fetchCurrentWeather('ekaterinburg'));
+    }, []);
+
+    console.log(weather);
     
     const items: Item[] = [
         {
             icon_id: 'temp',
             name: 'Температура',
-            value: '20° - ощущается как 17°',
+            value: `${weather.main.temp}`,
+            units: '°',
         },
         {
             icon_id: 'pressure',
             name: 'Давление',
-            value: '765 мм ртутного столба - нормальное',
+            value: `${weather.main.pressure}`,
+            units: ' мм рт. ст.'
         },
         {
             icon_id: 'precipitation',
-            name: 'Осадки',
-            value: 'Без осадков',
+            name: 'Влажность',
+            value: `${weather.main.humidity}`,
+            units: '%',
         },
         {
             icon_id: 'wind',
             name: 'Ветер',
-            value: '3 м/с юго-запад - легкий ветер',
+            value: `${weather.wind.speed}`,
+            units: ' м/с',
         },
-    ];
+    ]
 
     return (
         <div>
@@ -57,8 +72,7 @@ export const Popup = (item: Props) => {
                 <div className={s.this__day_info_items}>
                     {
                         items.map((item: Item) => (
-                            //<ThisDayItem weather={weather} key={item.icon_id} item={item} />
-                            item
+                            <ThisDayItem weather={weather} key={item.icon_id} item={item} />
                         ))
                     }
                 </div>

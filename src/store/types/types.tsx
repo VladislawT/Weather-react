@@ -3,5 +3,8 @@ export type Weather = {
     temp: number;
     pressure: number,
     humidity: number,
-  };
+  },
+  wind: {
+    speed: number,
+  }
 };

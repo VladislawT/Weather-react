@@ -3,6 +3,7 @@ import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import CloudQueueRoundedIcon from '@mui/icons-material/CloudQueueRounded';
 import OpacityIcon from '@mui/icons-material/Opacity';
 import CloudIcon from '@mui/icons-material/Cloud';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 
 interface Props {
     id: string,
@@ -17,7 +18,7 @@ export const GlobalSvgSelector = ({ id }: Props) => {
             );
         case 'change_theme':
             return (
-                <CloudQueueRoundedIcon fontSize="small" />
+                <DarkModeIcon fontSize="small" />
             );
         case 'sun':
             return (

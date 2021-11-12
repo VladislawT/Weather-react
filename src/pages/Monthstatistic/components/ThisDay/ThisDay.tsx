@@ -22,7 +22,7 @@ export const ThisDay = ({weather}: Props) => {
                 <GlobalSvgSelector id='sun' />
             </div>
             <div className={s.bottom__block}>
-                <div className={s.this__time}>Время: <span>{date.getHours()} : {date.getMinutes()}</span></div>
+                <div className={s.this__time}>Время: <span>{date.getHours()}<span className={s.this__time_units} >ч</span>  : {date.getMinutes()}<span className={s.this__time_units}>м</span></span></div>
                 <div className={s.this__city}>Город: <span>Екатеринбург</span></div>
             </div>
         </div>

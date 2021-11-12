@@ -19,7 +19,10 @@ const initialState: CurrentWeather = {
             temp: 0,
             pressure: 0,
             humidity: 0,
-        }
+        },
+        wind: {
+            speed: 0,
+          }
     },
     isLoading: false,
     response: {

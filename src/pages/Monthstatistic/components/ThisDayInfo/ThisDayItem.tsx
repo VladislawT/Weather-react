@@ -10,9 +10,7 @@ interface Props {
 }
 
 export const ThisDayItem = ({item, weather }: Props) => {
-    const { icon_id, name, value } = item;
-    
-    
+    const { icon_id, name, value, units } = item;
     
     return (
         <div className={s.item}>
@@ -20,7 +18,7 @@ export const ThisDayItem = ({item, weather }: Props) => {
                 <IndicatorSvgSelector id={icon_id}/>
             </div>
             <div className={s.indicator__name}>{name}</div>
-            <div className={s.indicator__value}>{value}</div>
+            <div className={s.indicator__value}>{Math.floor(+value)}{units}</div>
         </div>
     )
 }
