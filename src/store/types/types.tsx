@@ -6,5 +6,8 @@ export type Weather = {
   },
   wind: {
     speed: number,
+  },
+  clouds:{
+    all: number;
   }
 };

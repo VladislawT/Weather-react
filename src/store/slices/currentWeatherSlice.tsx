@@ -22,7 +22,10 @@ const initialState: CurrentWeather = {
         },
         wind: {
             speed: 0,
-          }
+          },
+          clouds:{
+            all: 0,
+          },
     },
     isLoading: false,
     response: {

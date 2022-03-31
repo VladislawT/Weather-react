@@ -9,7 +9,7 @@ interface Props {
     weather:Weather,
 }
 
-export const ThisDayItem = ({item, weather }: Props) => {
+export const ThisDayItem = ({item, weather }: Props):JSX.Element => {
     const { icon_id, name, value, units } = item;
     
     return (

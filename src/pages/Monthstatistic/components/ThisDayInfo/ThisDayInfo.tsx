@@ -43,6 +43,12 @@ export const ThisDayInfo = ({weather}: Props) => {
             value: `${weather.wind.speed}`,
             units: ' м/с',
         },
+        {
+            icon_id: 'cloud',
+            name: 'Облачность',
+            value: `${weather.clouds.all}`,
+            units: ' %',
+        },
     ]
     return (
         <div className={s.this__day_info}>

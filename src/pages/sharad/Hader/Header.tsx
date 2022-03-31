@@ -14,11 +14,11 @@ export const Header = (props: Props) => {
     const theme = useTheme();
 
     const options = [
-        { value: 'city-1', label: 'Санкт-Петербург' },
+        { value: 'city-1', label: 'Екатеринбург' },
         { value: 'city-2', label: 'Москва' },
         { value: 'city-3', label: 'Суздаль' },
         { value: 'city-4', label: 'Владимер' },
-        { value: 'city-5', label: 'Екатеринбург' },
+        { value: 'city-5', label: 'Санкт-Петербург' },
     ];
 
 
@@ -61,7 +61,7 @@ export const Header = (props: Props) => {
                 <div className={s.change__theme} onClick={cangeTheme}>
                     <GlobalSvgSelector id="change_theme" />
                 </div>
-                <Select defaultValue={options[0]} styles={colourStyles} options={options} />
+                <Select defaultValue={options[0]}  styles={colourStyles} options={options} />
             </div>
         </header>
     )
